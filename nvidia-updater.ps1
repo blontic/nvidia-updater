@@ -29,7 +29,7 @@
 $steamApp = "C:\Program Files (x86)\Steam\Steam.exe"         # Location of your Steam application
 $driverGracePeriod = 10                                      # How many days grace period before installing the new driver
 $cleanInstall = $false                                       # Do you want to run a clean installation of the driver?
-$pauseOnError = $false                                        # Do you want to pause the script on an error?
+$pauseOnError = $false                                       # Do you want to pause the script on an error?
 
 function WriteError ($errorMsg) {
     Write-Host @textColorError "Error: $errorMsg"
@@ -189,7 +189,7 @@ function GetDriver ($version) {
         Get7zip
 
         Write-Host @textColor1 "Extracting files"
-        $args = "x -bso0 -bsp1 $dlFile Display.Driver Display.Optimus PhysX NVI2 EULA.txt ListDevices.txt setup.cfg setup.exe -o$extractDir"
+        $args = "x -bso0 -bsp1 $dlFile Display.Driver Display.Optimus GFExperience PhysX NVI2 EULA.txt ListDevices.txt setup.cfg setup.exe -o$extractDir"
         Start-Process 7z.exe -workingdirectory ${env:TEMP} -NoNewWindow -ArgumentList $args -wait
         Write-Host @textColor2 "Done"
 
