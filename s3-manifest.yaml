@@ -1,4 +1,0 @@
-Resources:
-  - S3:
-      Type: AWS::Cloudformation
-      TemplateURL: s3://workloads-dev-984321978539-ap-southeast-2/s3.template
